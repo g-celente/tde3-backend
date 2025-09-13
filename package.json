@@ -1,0 +1,51 @@
+{
+  "name": "audit-checklist-backend",
+  "version": "1.0.0",
+  "description": "Backend para sistema de auditoria com checklists baseados em IA",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:seed": "node prisma/seed.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "setup": "npm install && npm run prisma:generate && npm run prisma:migrate && npm run prisma:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "keywords": [
+    "audit",
+    "checklist",
+    "AI",
+    "OpenAI"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mammoth": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.14.2",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "prisma": "^5.5.2"
+  }
+}
